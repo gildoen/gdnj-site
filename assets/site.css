@@ -397,17 +397,11 @@ footer{border-top:1px solid var(--border);padding:64px 0 40px;background:#fff}
 @media (max-width:1024px){.news{grid-template-columns:1fr}}
 @media (max-width:640px){.home-hero{padding:120px 0 48px}.home-hero .ctas .btn{width:100%}}
 
-/* ---------- DISCIPLESHIP YEAR PLAN ---------- */
-.yr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.yr-head{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:12.5px;font-weight:700;letter-spacing:.1em;color:var(--gray-500)}
-.yr-head span{border-top:2px solid #444;padding-top:10px}
-.yr .seg{background:#161616;border:1px solid #262626;border-radius:18px;padding:18px 22px 18px 18px;display:flex;gap:18px;align-items:center;transition:border-color .2s}
-.yr .seg:hover{border-color:#555}
-.yr .seg img{width:62px;height:auto;border-radius:4px;flex-shrink:0;box-shadow:0 8px 20px -8px rgba(0,0,0,.8)}
-.yr .seg.full{grid-column:1/-1;border-color:#3a3a3a;background:linear-gradient(90deg,#1c1c1c,#141414)}
-.yr .when{display:inline-block;font-size:12px;font-weight:700;background:#fff;color:#000;border-radius:999px;padding:2px 10px;margin-bottom:6px}
-.yr .seg.full .when{background:var(--accent);color:#fff}
-.yr b{display:block;font-size:19px;color:#fff;letter-spacing:-.01em}
-.yr small{display:block;font-size:13px;color:var(--gray-400);margin-top:1px}
-.yr p{font-size:14.5px;color:var(--gray-400);margin-top:6px;line-height:1.6}
-@media (max-width:640px){.yr,.yr-head{grid-template-columns:1fr}.yr-head{display:none}.yr .seg img{width:54px}}
+/* ---------- DISCIPLESHIP (3 courses at a glance) ---------- */
+.dt{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dt-card{background:#161616;border:1px solid #262626;border-radius:18px;padding:22px 22px 22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.dt-card .when{display:inline-block;font-size:12.5px;font-weight:700;background:#fff;color:#000;border-radius:999px;padding:3px 11px;margin-bottom:10px}
+.dt-card .when.blue{background:var(--accent);color:#fff}
+.dt-card b{display:block;font-size:21px;color:#fff;letter-spacing:-.02em;line-height:1.3}
+.dt-card img{width:40px;height:auto;border-radius:3px;flex-shrink:0;box-shadow:0 6px 16px -6px rgba(0,0,0,.8)}
+@media (max-width:900px){.dt{grid-template-columns:1fr}}
