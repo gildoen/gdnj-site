@@ -430,3 +430,12 @@ footer{border-top:1px solid var(--border);padding:64px 0 40px;background:#fff}
 @media (max-width:1024px){.course{grid-template-columns:1fr;gap:28px}.course-side{flex-direction:row;align-items:flex-start}.course-side img{width:110px}}
 @media (max-width:900px){.dt{grid-template-columns:1fr}}
 @media (max-width:640px){.course{padding:22px}.course-toc{grid-template-columns:1fr}.course-side{flex-direction:column}.course-side img{width:120px}}
+
+/* ---------- STAFF ROW (pastor + directors) ---------- */
+.staff-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:960px;margin:0 auto}
+.staff-row .staff-card .ph{aspect-ratio:4/5}
+.staff-row .staff-card .tx{padding:16px 18px 18px}
+.staff-row .staff-card .tag{font-size:12px;padding:3px 10px;margin-bottom:10px}
+.staff-row .staff-card .who{font-size:17px}
+.staff-row .staff-card .en{font-size:13px}
+@media (max-width:900px){.staff-row{grid-template-columns:repeat(2,1fr)}}
