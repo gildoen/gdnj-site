@@ -397,11 +397,36 @@ footer{border-top:1px solid var(--border);padding:64px 0 40px;background:#fff}
 @media (max-width:1024px){.news{grid-template-columns:1fr}}
 @media (max-width:640px){.home-hero{padding:120px 0 48px}.home-hero .ctas .btn{width:100%}}
 
-/* ---------- DISCIPLESHIP (3 courses at a glance) ---------- */
+/* ---------- DISCIPLESHIP ---------- */
 .dt{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.dt-card{background:#161616;border:1px solid #262626;border-radius:18px;padding:22px 22px 22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-.dt-card .when{display:inline-block;font-size:12.5px;font-weight:700;background:#fff;color:#000;border-radius:999px;padding:3px 11px;margin-bottom:10px}
-.dt-card .when.blue{background:var(--accent);color:#fff}
+.dt-card{background:#161616;border:1px solid #262626;border-radius:18px;padding:22px 22px 22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:border-color .2s,transform .2s}
+.dt-card:hover{border-color:#555;transform:translateY(-2px)}
+.when{display:inline-block;font-size:12.5px;font-weight:700;background:#fff;color:#000;border-radius:999px;padding:3px 11px;margin-bottom:10px}
+.when.blue{background:var(--accent);color:#fff}
 .dt-card b{display:block;font-size:21px;color:#fff;letter-spacing:-.02em;line-height:1.3}
-.dt-card img{width:40px;height:auto;border-radius:3px;flex-shrink:0;box-shadow:0 6px 16px -6px rgba(0,0,0,.8)}
+.dt-card small{display:block;font-size:13.5px;color:var(--gray-400);margin-top:4px}
+.dt-card img{width:64px;height:auto;border-radius:4px;flex-shrink:0;box-shadow:0 8px 20px -8px rgba(0,0,0,.8)}
+.courses{display:flex;flex-direction:column;gap:16px;margin-top:40px}
+.course{display:grid;grid-template-columns:380px 1fr;gap:40px;background:#111;border:1px solid #262626;border-radius:var(--radius-lg);padding:36px;scroll-margin-top:130px}
+.course-side{display:flex;flex-direction:column;gap:22px}
+.course-side img{width:150px;border-radius:6px;box-shadow:0 20px 40px -14px rgba(0,0,0,.8)}
+.course-side h3{font-size:30px;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
+.course-side p{font-size:15.5px;color:var(--gray-400);line-height:1.8}
+.cmeta{font-size:13px;color:var(--gray-500);font-weight:600;margin-top:14px}
+.course-toc{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-content:start;align-items:start}
+.unit{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:14px;transition:border-color .2s}
+.unit[open]{border-color:#4a4a4a;background:#1d1d1d}
+.unit summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:15px 16px}
+.unit summary::-webkit-details-marker{display:none}
+.unit .no{flex-shrink:0;font-size:12px;font-weight:700;color:var(--gray-400);min-width:42px}
+.unit .t{flex:1;font-size:16px;font-weight:600;color:#fff;line-height:1.4}
+.unit .pm{flex-shrink:0;width:22px;height:22px;border-radius:50%;border:1px solid #3a3a3a;display:grid;place-items:center;font-size:13px;color:var(--gray-400);transition:transform .25s}
+.unit[open] .pm{transform:rotate(45deg)}
+.unit ol{list-style:none;counter-reset:l;padding:0 16px 14px 70px;display:flex;flex-direction:column;gap:6px}
+.unit li{counter-increment:l;font-size:14.5px;color:var(--gray-400);line-height:1.55;position:relative}
+.unit li::before{content:counter(l);position:absolute;left:-22px;font-size:12px;color:var(--gray-500);font-weight:600;top:1px}
+.unit li.sg{color:var(--gray-500);font-size:13px}
+.unit li.sg::before{content:"·"}
+@media (max-width:1024px){.course{grid-template-columns:1fr;gap:28px}.course-side{flex-direction:row;align-items:flex-start}.course-side img{width:110px}}
 @media (max-width:900px){.dt{grid-template-columns:1fr}}
+@media (max-width:640px){.course{padding:22px}.course-toc{grid-template-columns:1fr}.course-side{flex-direction:column}.course-side img{width:120px}}
