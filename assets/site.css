@@ -396,3 +396,19 @@ footer{border-top:1px solid var(--border);padding:64px 0 40px;background:#fff}
 .news-main h3{font-size:24px;letter-spacing:-.02em;margin-bottom:6px}
 @media (max-width:1024px){.news{grid-template-columns:1fr}}
 @media (max-width:640px){.home-hero{padding:120px 0 48px}.home-hero .ctas .btn{width:100%}}
+
+/* ---------- BOOKS (discipleship) ---------- */
+.books{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+.book-card{background:#161616;border:1px solid #262626;border-radius:var(--radius-lg);padding:36px;display:flex;flex-direction:column}
+.book-card .covers{display:flex;gap:18px;align-items:flex-end;margin-bottom:30px;min-height:280px}
+.book-card .cover{position:relative}
+.book-card .cover img{height:260px;width:auto;border-radius:6px;box-shadow:0 24px 48px -14px rgba(0,0,0,.75);transition:transform .4s}
+.book-card:hover .cover img{transform:translateY(-4px)}
+.book-card .cover .tag{position:absolute;top:-12px;left:12px;z-index:1}
+.tag-light{background:#fff;color:#000;border-color:#fff}
+.book-card .meta{font-size:13.5px;color:var(--gray-400);font-weight:600;margin-bottom:8px}
+.book-card h3{font-size:28px;letter-spacing:-.02em;color:#fff;margin-bottom:10px}
+.book-card p{font-size:16px;color:var(--gray-400);line-height:1.8}
+.book-card .sched .row:first-of-type{border-top:1px solid rgba(255,255,255,.09)}
+@media (max-width:1024px){.books{grid-template-columns:1fr}}
+@media (max-width:640px){.book-card{padding:26px}.book-card .cover img{height:200px}.book-card .covers{min-height:220px}}
